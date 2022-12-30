@@ -3,24 +3,24 @@ import type { Person } from "./varTypes"
 
 export const PersonInfo: Person = {
     Name: {
-        FirstName: "your first name",
-        LastName: "your last name"
+        FirstName: "Bryan",
+        LastName: "Guffey"
     },
-    Pronouns: "your prouns" 
+    Pronouns: "they/them" 
 }
 
 export const Socials: SocialsType = {
-    twitterLink: "fill me in",
-    instagramLink: "fill me in", 
-    tiktokLink: "fill me in",
-    spotifyLink: "fill me in",
-    mastadonLink: "fill me in",
-    cohostLink: "fill me in"
+    twitterLink: "https://twitter.com/blackqueeriroh",
+    instagramLink: "https://facebook.com/musicjukieg", 
+    tiktokLink: "https://tiktok.com/@blackqueeriroh",
+    spotifyLink: "https://open.spotify.com/user/musicjunkieg?si=eccecce14db8445b",
+    mastadonLink: "https://terra.incognita.net/@blackqueeriroh",
+    cohostLink: "https://cohost.org/blackqueeriroh"
 }
 
 export const MetaData = {
-    BaseUrl: "example-link.net",
-    ImageName: "file_name",
+    BaseUrl: "bryanguffey.com",
+    ImageName: "bryan",
     Colours: {
         MainColour: "rgb(132, 8, 132)",
         BackgroundColour: "#fafafa"
