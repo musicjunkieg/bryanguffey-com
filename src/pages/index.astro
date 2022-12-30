@@ -1,0 +1,54 @@
+---
+import Header from "../components/Header.astro";
+import Links from "../components/Links.astro";
+import Socials from "../components/Socials.astro";
+import Global from "../components/Global.astro";
+import { PersonInfo, Socials as SocialsLinks, MetaData } from "../globalVars";
+const { Name, Pronouns } = PersonInfo;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <Global />
+  </head>
+
+  <body>
+    <main class="container">
+      <Header
+        name={`${Name.FirstName} ${Name.LastName}`}
+        description={`Hey I'm ${Name.FirstName} ${
+          Pronouns ? `(${Pronouns})` : ""
+        } and this is the stuff I do on the internet`}
+        image={MetaData.ImageName}
+        image-alt={`A photo of ${Name.FirstName}`}
+      />
+      <Links />
+      <Socials
+        twitterLink={SocialsLinks?.twitterLink}
+        tiktokLink={SocialsLinks?.tiktokLink}
+        spotifyLink={SocialsLinks.spotifyLink}
+        instagramLink={SocialsLinks.instagramLink}
+        mastadonLink={SocialsLinks.mastadonLink}
+        cohostLink={SocialsLinks.cohostLink}
+      />
+    </main>
+
+    <style>
+      .container {
+        margin: 0px auto;
+        height: 100%;
+        width: 100%;
+        max-width: 680px;
+        padding-bottom: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex: 1 1 0%;
+        padding: 24px 12px;
+      }
+    </style>
+  </body>
+</html>

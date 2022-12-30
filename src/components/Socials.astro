@@ -1,0 +1,31 @@
+---
+import Instagram from "./Socials/Instagram.astro";
+import Twitter from "./Socials/Twitter.astro";
+import Tiktok from "./Socials/Tiktok.astro";
+import Spotify from "./Socials/Spotify.astro";
+import Mastadon from "./Socials/Mastadon.astro";
+import CoHost from "./Socials/CoHost.astro";
+const { twitterLink, instagramLink, tiktokLink, spotifyLink, mastadonLink, cohostLink } = Astro.props;
+---
+
+<div class="card">
+  {twitterLink && <Twitter link={twitterLink} />}
+  {instagramLink && <Instagram link={instagramLink} />}
+  {tiktokLink && <Tiktok link={tiktokLink} />}
+  {spotifyLink && <Spotify link={spotifyLink} />}
+  {mastadonLink && <Mastadon link={mastadonLink} />}
+  {cohostLink && <CoHost link={cohostLink} />}
+</div>
+
+<style>
+  .card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 8px;
+    gap: 20px;
+  }
+</style>
